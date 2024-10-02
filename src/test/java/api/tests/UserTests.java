@@ -48,8 +48,7 @@ public class UserTests {
     @Test(priority = 3)
     public void testUpdate_User(){
         objUser.setUsername("PRTK");
-        objUser.setFirstName("Prateek");
-        objUser.setLastName("Gupta");
+        objUser.setFirstName("Prateek");objUser.setLastName("Gupta");
 
         Response res=UserEndPoints.updateUser(objUser,objUser.getUsername());
         res.then().log().all();
@@ -70,6 +69,7 @@ public class UserTests {
         res.then().log().all();
 
         Assert.assertEquals(res.getStatusCode(),200);
+
     }
 
 
