@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name ="api.utilities.ExtentReportManager"/>
+    </listeners>
+
+    <test verbose="2" preserve-order="true" name="D:/RestAssured_API_Practice/PetStoreAutomation">
+        <classes>
+            <class name="api.tests.UserTests">
+                <methods>
+                    <include name="testPost_User"/>
+                    <include name="testGet_User"/>
+                    <include name="testUpdate_User"/>
+                    <include name="DeleteTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
